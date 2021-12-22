@@ -1,0 +1,29 @@
+img {
+    width: 450px;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+p{
+    padding-left: 5%;
+    width:95%;
+    text-align: center;
+}
+body{
+    margin-left: 2%;
+}
+.banner{
+    padding-top: 5pX;
+    padding-left: 6px;
+    width: 47%;
+    height: 442px;
+}
+.pagination>li>a, .pagination>li>span { 
+border-radius: 50% 
+!important;margin: 0 5px;
+display: flex;
+float: auto;
+}
+.pagination{
+    margin-left: 50%;
+}

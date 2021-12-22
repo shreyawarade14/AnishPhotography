@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let story of stories">            
+            <div class="thumbnail">
+                <div class="caption">
+                    <h4>{{story.title}}</h4>
+                    <p>{{story.description}}</p>
+                </div>
+                <img [src]="story.image" alt="...">
+            </div>
+        </div>
+    </div>  
+</div>

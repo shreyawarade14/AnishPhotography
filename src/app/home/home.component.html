@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+        <img class="banner" src="assets/images/gif.gif">
+        <img class="banner" src="assets/images/gif2.gif">
+        <h2 style="text-align: center; font-family: Garamond;padding-top: 25px;">Modern Indian Wedding Photography for the Discerning Couple</h2>
+        <p style="font-family: Lucida Handwriting;">We believe wedding photography should be unscripted, fun and timeless. On this page is a small portfolio from the hundreds of weddings we've been at over the last ten years. Our style is contemporary, fun and modern with an inclination towards moments in-between moments and classic portraiture</p>
+
+<div class="row">
+        <div *ngFor="let image of images; let i=index">
+                <div class="col-md-4" *ngIf='i<15 && !isSecondPage'>
+                        <img [src]="image.thumb" (click)="open(i)">
+                </div>
+        </div>
+
+        
+
+        <div *ngFor="let image1 of images.slice(10,20);">
+                <div class="col-md-4" *ngIf='isSecondPage'> 
+                        <img [src]="image1.thumb">  
+                </div>
+        </div>
+
+
+</div>
+<div class="container">
+<ul class="pagination">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a (click)="nextPage()">1 <span class="sr-only">(current)</span></a></li>
+              <li><a (click)="nextPage()">2</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+</div>
+</body>
+</html>
